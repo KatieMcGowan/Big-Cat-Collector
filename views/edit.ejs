@@ -5,15 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Big Cat Edit Page</title>
+  <link href="/public/styles.css" type="text/css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Edit <%= oneBigCat.name %></h1>
-  <form action="/bigcats/<%= index %>?_method=PUT" method="POST">
-    Name: <input type="text" name="name" value="<%= oneBigCat.name %>"/><br/>
-    Fur: <input type="text" name="fur" value="<%= oneBigCat.fur %>"/><br/>
-    Home: <input type="text" name="home" value="<%= oneBigCat.home %>"/><br/>
-    Fun fact: <input type="text" name="fact" value="<%= oneBigCat.fact %>"/><br/>
-    <input type="submit" value="Submit changes"/>
-  </form>  
+  <div class="display">
+    <h1>Edit <%= oneBigCat.name %></h1>
+    <form action="/bigcats/<%= index %>?_method=PUT" method="POST">
+      Name: <input type="text" name="name" value="<%= oneBigCat.name %>"/><br/>
+      Fur: <input type="text" name="fur" value="<%= oneBigCat.fur %>"/><br/>
+      Home: <input type="text" name="home" value="<%= oneBigCat.home %>"/><br/>
+      Fun fact: <input type="text" name="fact" value="<%= oneBigCat.fact %>"/><br/>
+      <input type="submit" value="Submit changes" class="button hover"/>
+    </form>  
+  </div> 
 </body>
 </html>

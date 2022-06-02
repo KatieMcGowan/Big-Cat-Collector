@@ -6,9 +6,12 @@ const bodyParser = require("body-parser");
 const PORT = 3000;
 const bigCatController = require("./controllers/bigcatcontroller.js");
 
-//MIDDLEWARE
+//DELETE MIDDLEWARE
 app.use(methodOverride('_method'));
+//BODY-PARSER MIDDLEWARE
 app.use(bodyParser.urlencoded({ extended: false }));
+//CSS MIDDLEWARE
+app.use("/public", express.static("public"));
 
 //INITIALIZING CONTROLLER (ALWAYS PLACE AFTER MIDDLWARE)
 app.use("/bigcats", bigCatController);

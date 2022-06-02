@@ -21,7 +21,7 @@ const bigcats = [
 
   {name: "Cougar",
   fur: "tan",
-  home: "Americas",
+  home: "the Americas",
   fact: "you're always being watched by one if you go hiking"},
 ];
 

@@ -5,26 +5,35 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Big Cat Index Page</title>
+  <link href="/public/styles.css" type="text/css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Big Cats</h1>
-  <ul>
-    <% for (let i = 0; i < allBigCats.length; i++) { %>
-      <li>
-        <a href="/bigcats/<%= i %>">
-          <%= allBigCats[i].name %>
-        </a>
+  <div class="display">
+    <h1>Big Cats</h1>
+      <% for (let i = 0; i < allBigCats.length; i++) { %>
+        <p class="hover">
+          <a href="/bigcats/<%= i %>" class="link hover">
+            <%= allBigCats[i].name %>
+          </a>
+          <br/>
+        <div class="form">
+          <form action="/bigcats/<%= i %>/editBigCat">
+            <input type="submit" value="Edit big cat" class="button hover"/>
+          </form>
+          <div class="space"></div>
+          <form action="/bigcats/<%= i %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete big cat" class="button hover"/>
+          </form>
+        </div>  
         <br/>
-      <form action="/bigcats/<%= i %>/editBigCat">
-        <input type="submit" value="Edit big cat">
-      </form>
-      <form action="/bigcats/<%= i %>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete big cat"/>
-      </form>
-      </li>
-      <% } %>    
-  </ul>
-    <a href="/bigcats/newBigCat">Click here to add a new big cat</a>
+      </p>
+        <% } %>    
+    </ul>
+      <a href="/bigcats/newBigCat" class="link hover">Click here to add a new big cat</a>
+  </div>    
 </body>
 </html>
 

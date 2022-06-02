@@ -5,15 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>New Big Cat Page</title>
+  <link href="/public/styles.css" type="text/css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Enter a new big cat</h1>
-    <form action="/bigcats" method="POST">
-      Name: <input type="text" name="name" /><br/>
-      Fur: <input type="text" name="fur" /><br/>
-      Home: <input type="text" name="home" /><br/>
-      Fun fact: <input type="text" name="fact" /><br/>
-      <input type="submit" value="Create big cat"/>
-  </form>
+  <div class="display">
+    <h1>Enter a new big cat</h1>
+      <form action="/bigcats" method="POST">
+        Name: <input type="text" name="name" /><br/>
+        Fur: <input type="text" name="fur" /><br/>
+        Home: <input type="text" name="home" /><br/>
+        Fun fact: <input type="text" name="fact" /><br/>
+        <input type="submit" value="Create big cat" class="button hover"/>
+    </form>
+  </div>
 </body>
 </html>

@@ -5,12 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Big Cat Show Page</title>
+  <link href="/public/styles.css" type="text/css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1><%= oneBigCat.name %></h1>
-  <p> The <%= oneBigCat.name %>, with it's <%= oneBigCat.fur %> fur, lives in <%= oneBigCat.home%>.</p>
-  <p> A fun fact about the <%= oneBigCat.name%>: <%= oneBigCat.fact %>.</p>
-  <br/>
-  <a href="/bigcats">Click here to return to index</a>
+  <div class="display">
+    <h1><%= oneBigCat.name %></h1>
+    <p> The <%= oneBigCat.name %>, with it's <%= oneBigCat.fur %> fur, lives in <%= oneBigCat.home%>.</p>
+    <p> A fun fact about the <%= oneBigCat.name%>: <%= oneBigCat.fact %>.</p>
+    <br/>
+    <a href="/bigcats" class="link hover">Click here to return to index</a>
+  </div>  
 </body>
 </html>
